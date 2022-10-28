@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title> Convert Degrees, Minutes and Seconds to Deciaml Degrees</title>
+	<meta name="keywords" content="degrees, minutes, seconds, decimal, convert" />
+	<script src="convert.js">
+	</script>
+	<style>
+	.center {
+		margin-left: auto;
+		margin-right: auto;
+		}
+		body{
+			background-color: #e0ffff; /*lightcyan hex number*/
+		}
+		hr.thick {
+			border: 1px solid black;
+			border-radius: 5px;
+			}
+		 div{
+		 text-align: center;
+		 }
+</style>
+</head>
+<body>
+<h2 style="text-align: center;">Convert Degrees, Minutes, and Seconds to Decimal Degrees</h2>
+<hr class = "thick">
+<form name = "dms" action="#">
+	<div>
+	<table class ="center">
+			<tr>
+				<td>Enter degrees: </td>
+				<td>&nbsp;</td>
+				<td><input type="number" name="degrees" value = "59" min="0" max="180" /></td>
+				
+				
+			</tr>
+			<tr>
+				<td>Enter minutes: </td>
+				<td>&nbsp;</td>
+				<td><input type="number" name="minutes" value = "49" min="0" max="59" /></td>
+				
+				
+			</tr>
+			<tr>
+				<td>Enter seconds: </td>
+				<td>&nbsp;</td>
+				<td><input type="number" name="seconds" value = "39" min="0" max="59" /></td>
+				
+				
+				</tr>
+			<tr>
+				<td>Decimal Degrees: </td>
+				<td>&nbsp;</td>
+				<td><input type="number" name="decNum" min="0" max="180"/></td>
+				</tr>
+	</table>
+				<input type="button" value = "Calculate" name="cmd_click" onclick="convert(document.dms)" />&nbsp; &nbsp; 
+				<input type="reset" name="Reset" id="reset" value="Reset" />
+</div>
+	<hr class = "thick">
+</form>
+<br>
+</body>
+</html>
+
+	
