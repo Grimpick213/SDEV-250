@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Individual Case Project</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="modernizr.custom.05819.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            Demitri's Case Project
+        </h1>
+    </header>
+    <a href="/Users/grimp/Desktop/IndividualCaseProject/1stPage.html">1stPage</a>
+    <a href="/Users/grimp/Desktop/IndividualCaseProject/2ndpage.html">2nd Page</a>
+    <a href="/Users/grimp/Desktop/IndividualCaseProject/3rdpage.html">3rd Page</a>
+    <form id="healthMeter" action="">
+        <p>
+            <label for="hoursPlayed">Amount of Hours Played:</label>
+            <input type="number" id="hoursPlayed" value="hoursPlayed">
+        </p>
+        <p>
+            <label for="waterDrank">Amount of Water Consumed:</label>
+            <input type="number" id="waterDrank" value="waterDrank">
+        </p>
+        <p>
+            <label for="stretchTime">Amount of Stretch Time:</label>
+            <input type="number" id="stretchTime" value="stretchTime">
+        </p>
+        <p>
+            <label for="submit">Calculate Health Meter:</label>
+            <input type="button" text="submit" id="submit" value="Submit" name="submit">
+        </p>
+        <p>
+            <label for="healthMeter">Health Meter</label>
+            <input id="healthMeter" name="healthMeter" type="number" />
+        </p>
+    </form>
+    <script>
+        (function calculateHealthMeter(hoursPlayed, stretchTime, waterDrank) {
+            hoursPlayed = parseFloat(hoursPlayed)
+            stretchTime = parseFloat(stretchTime)
+            waterDrank = parseFloat(waterDrank)
+            return (hoursPlayed * stretchTime * waterDrank)
+
+            var healthMeter = document.getElementById("healthMeter");
+            if (healthMeter) {
+                healthMeter.onsubmit = function () {
+                    this.healthMeter.value = calculateHealthMeter(this.hoursPlayed.value, this.stretchTime.value, this.waterDrank.value);
+                    return false;
+                }
+            }
+        });
+    </script>
+</body>
